@@ -1,6 +1,8 @@
 API Setup
 *********
 
+To install the server-side functionality of the app, please follow these steps:
+
 1. ``cd /var/www``
 2. ``sudo mkdir callidus``
 3. ``sudo chown user:user callidus``
