@@ -134,7 +134,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'CallidusMappingDocs.tex', 'Callidus Mapping Docs Documentation',
+    (master_doc, 'CallidusMappingDocs.tex', 'Callidus Mapping Documentation',
      'Josh Sullivan', 'manual'),
 ]
 
