@@ -100,6 +100,9 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
+# HTML Logo
+html_logo = 'images/navagis-logo-black.png'
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
