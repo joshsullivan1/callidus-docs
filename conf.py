@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # html_sidebars = {}
 
 # HTML Logo
-html_logo = 'images/navagis-logo-black.png'
+html_logo = 'images/navagis-logo-white-resized.png'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
