@@ -1,0 +1,6 @@
+Widget Setup
+************
+
+1. ``cd /var/www/callidus/client``
+2. ``npm install``
+3. ``npm start``
