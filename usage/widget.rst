@@ -1,5 +1,21 @@
-Show Geography
+Map Widget API
 **************
+
+The following sections show you how to include the mapping widget and its functionality.
+
+==============
+Drawing Widget
+==============
+
+``showDrawingWidget()``
+
+*Shows the drawing tools and upload file tool on the map.*
+
+.. image:: ../images/show-drawing-widget.png
+
+==============
+Show Geography
+==============
 
 ``showGeographyMap(id, isEditable, showHierarchy)``
 

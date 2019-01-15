@@ -1,0 +1,147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Map Widget API &#8212; Callidus Mapping  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Database Schema" href="../specs/database-schema.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="map-widget-api">
+<h1>Map Widget API<a class="headerlink" href="#map-widget-api" title="Permalink to this headline">¶</a></h1>
+<p>The following sections show you how to include the mapping widget and its functionality.</p>
+<div class="section" id="drawing-widget">
+<h2>Drawing Widget<a class="headerlink" href="#drawing-widget" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">showDrawingWidget()</span></code></p>
+<p><em>Shows the drawing tools and upload file tool on the map.</em></p>
+<img alt="../_images/show-drawing-widget.png" src="../_images/show-drawing-widget.png" />
+</div>
+<div class="section" id="show-geography">
+<h2>Show Geography<a class="headerlink" href="#show-geography" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">showGeographyMap(id,</span> <span class="pre">isEditable,</span> <span class="pre">showHierarchy)</span></code></p>
+<p><em>Shows a geography on the map.</em></p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><strong>id</strong> (required): id of the geography to be shown</li>
+<li><strong>isEditable</strong> (default is false): boolean flag to determine whether the geography shown should be editable</li>
+<li><strong>showHierarchy</strong> (default is false): boolean flag to determine whether to include view hierarchy functionality</li>
+</ul>
+<img alt="../_images/show-geography.png" src="../_images/show-geography.png" />
+</div>
+<div class="section" id="editable-geography">
+<h2>Editable Geography<a class="headerlink" href="#editable-geography" title="Permalink to this headline">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">isEditable</span></code> is to true, you can reposition each vertices to adjust the boundaries of the geography.</p>
+<img alt="../_images/edit-geography.png" src="../_images/edit-geography.png" />
+</div>
+<div class="section" id="hierarchy-functionality">
+<h2>Hierarchy Functionality<a class="headerlink" href="#hierarchy-functionality" title="Permalink to this headline">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">showHierarchy</span></code> is set to true, double left click on a geography to view child geographies and double right click to view parent geography</p>
+<img alt="../_images/show-child-geographies.png" src="../_images/show-child-geographies.png" />
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Callidus Mapping</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Map Widget API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#drawing-widget">Drawing Widget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#show-geography">Show Geography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editable-geography">Editable Geography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hierarchy-functionality">Hierarchy Functionality</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../specs/database-schema.html" title="previous chapter">Database Schema</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Navagis.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/usage/widget.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -12,5 +12,4 @@ Welcome to Callidus Mapping documentation!
    installation/api
    installation/widget
    specs/database-schema
-   usage/drawing-widget
-   usage/show-geography
+   usage/widget
