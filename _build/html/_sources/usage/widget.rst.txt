@@ -33,7 +33,7 @@ Show Geography
 Editable Geography
 ==================
 
-If ``isEditable`` is to true, you can reposition each vertices to adjust the boundaries of the geography.
+If ``isEditable`` is set to true, you can reposition each vertices to adjust the boundaries of the geography.
 
 .. image:: ../images/edit-geography.png
 
