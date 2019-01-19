@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Widget Setup &mdash; Callidus Mapping  documentation</title>
+  <title>API Integration &mdash; Callidus Mapping  documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Database Schema" href="../specs/database-schema.html" />
-    <link rel="prev" title="API Setup" href="api.html" /> 
+    <link rel="next" title="Map Widget API" href="../usage/widget.html" />
+    <link rel="prev" title="Database Schema" href="database-schema.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,10 +82,10 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Setup</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-schema.html">Database Schema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/widget.html">Map Widget API</a></li>
 </ul>
 
@@ -132,13 +132,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Widget Setup</li>
+      <li>API Integration</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/installation/widget.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/specs/api-integration.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -151,14 +151,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="widget-setup">
-<h1>Widget Setup<a class="headerlink" href="#widget-setup" title="Permalink to this headline">¶</a></h1>
-<p>To setup the widget, please follow these steps:</p>
-<ol class="arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/var/www/callidus/client</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">start</span></code></li>
-</ol>
+  <div class="section" id="api-integration">
+<h1>API Integration<a class="headerlink" href="#api-integration" title="Permalink to this headline">¶</a></h1>
+<p>Navagis makes use of the Callidus API to perform several functions:</p>
+<ul class="simple">
+<li>Sync and store Accounts latitude and longitude for fetching and displaying locally</li>
+<li>Creating Geographies through a POST request, returning the ID, and storing locally</li>
+</ul>
 </div>
 
 
@@ -169,10 +168,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../specs/database-schema.html" class="btn btn-neutral float-right" title="Database Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../usage/widget.html" class="btn btn-neutral float-right" title="Map Widget API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="api.html" class="btn btn-neutral" title="API Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="database-schema.html" class="btn btn-neutral" title="Database Schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -12,4 +12,5 @@ Welcome to Callidus Mapping documentation!
    installation/api
    installation/widget
    specs/database-schema
+   specs/api-integration
    usage/widget
