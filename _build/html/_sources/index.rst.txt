@@ -9,8 +9,10 @@ Welcome to Callidus Mapping documentation!
 .. toctree::
    :maxdepth: 2
 
+   installation/docker
    installation/api
    installation/widget
+   installation/initializing-app
    specs/database-schema
    specs/api-integration
    usage/widget

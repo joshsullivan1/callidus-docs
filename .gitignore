@@ -3,3 +3,4 @@ venv
 __pycache_/
 .idea/
 .DS_Store
+.vscode

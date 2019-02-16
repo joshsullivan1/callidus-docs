@@ -1,0 +1,10 @@
+Docker Installation
+********************
+
+Our goal is to offer a powerful set of APIs that is easy to deploy and maintain. We use Docker to package our app. Follow these simple steps to be up and running in minutes:
+
+1. Install `Docker https://docs.docker.com/install/`_ and `Docker Compose https://docs.docker.com/compose/install/`_ on the host environment.
+2. Clone the repository: ``git clone git@github.com:Navagis-LLC/Callidus.git``
+3. Run `docker-compose up -d --build`
+
+Grab a cup of coffee! ;-)

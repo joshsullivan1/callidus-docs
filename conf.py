@@ -181,3 +181,8 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+exclude_patterns = [
+    '/venv/lib/python3.7/site-packages/Jinja2-2.10.dist-info/DESCRIPTION.rst',
+    '/venv/lib/python3.7/site-packages/MarkupSafe-1.1.0.dist-info/LICENSE.rst', 
+    'README.md'
+]
