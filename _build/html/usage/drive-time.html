@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Drive-Time Matrix &mdash; Callidus Mapping  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Features" href="../features/features.html" />
+    <link rel="prev" title="Map Widget API" href="widget.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+          
+
+          
+            
+            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="initializing-app.html">Initializing App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget.html">Map Widget API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Drive-Time Matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#drive-time-calculation">Drive Time Calculation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#option-one">Option One</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-two">Option Two</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Callidus Mapping</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Drive-Time Matrix</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/drive-time.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drive-time-matrix">
+<h1>Drive-Time Matrix<a class="headerlink" href="#drive-time-matrix" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="drive-time-calculation">
+<h2>Drive Time Calculation<a class="headerlink" href="#drive-time-calculation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="option-one">
+<h3>Option One<a class="headerlink" href="#option-one" title="Permalink to this headline">¶</a></h3>
+<p>If origin and destination geographies only have one polygon each. We’ll get the centroid of the origin and destination polygon and then calculate drive time</p>
+<img alt="../_images/calculate-drive-time-option-1.png" src="../_images/calculate-drive-time-option-1.png" />
+</div>
+<div class="section" id="option-two">
+<h3>Option Two<a class="headerlink" href="#option-two" title="Permalink to this headline">¶</a></h3>
+<p>If origin and/or destination geographies has multiple polygons. We’ll do option 1 for each polygon then calculate the average drive time</p>
+<p><em>Computation Based on image bellow: (Distance A + Distance B + Distance C + Distance D) / 4</em></p>
+<img alt="../_images/calculate-drive-time-option-2.png" src="../_images/calculate-drive-time-option-2.png" />
+<p><strong>Sample Query and Results</strong></p>
+<p>To view this data in a spreadsheet, please view it &lt;a href=”<a class="reference external" href="https://docs.google.com/spreadsheets/d/1NzqmNex2vIzCXrK2JHLXlIfhvoysTmwCBNdQYiZm8TU/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1NzqmNex2vIzCXrK2JHLXlIfhvoysTmwCBNdQYiZm8TU/edit?usp=sharing</a>” target=”_blank”&gt;here&lt;/a&gt;.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">getAccountDriveTimeList</span><span class="p">(</span><span class="s2">&quot;509751182822998022&quot;</span><span class="p">,</span><span class="s2">&quot;509751182822998023&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// do stuff here</span>
+    <span class="p">});</span>
+    <span class="c1">// response object as json</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;destinationAddresses&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Golden State Blvd. &amp; N. Center St. (KFC), Turlock, CA 95380, USA&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;originAddresses&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;11348 Deerfield Dr, Truckee, CA 96161, USA&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;rows&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;elements&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;distance&quot;</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;297 km&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="mi">297132</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;duration&quot;</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;2 hours 56 mins&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="mi">10571</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;duration_in_traffic&quot;</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;2 hours 42 mins&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="mi">9721</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>The Distance Matrix API has limits. Therefore, we broke it into 3 different requests with 10 each request.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">origins</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;509751182822998017&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998019&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998022&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998024&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998026&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998028&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998030&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998032&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998034&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998036&quot;</span>
+<span class="p">];</span>
+<span class="nx">destinations</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;509751182822998018&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998020&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998023&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998025&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998027&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998029&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998031&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998033&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998035&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998037&quot;</span>
+<span class="p">];</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">getDriveTimeListAccountIds</span><span class="p">(</span><span class="nx">origins</span><span class="p">,</span> <span class="nx">destinations</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// do stuff</span>
+    <span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../features/features.html" class="btn btn-neutral float-right" title="Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="widget.html" class="btn btn-neutral" title="Map Widget API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Navagis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

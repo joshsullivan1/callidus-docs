@@ -28,7 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="API Integration" href="../specs/api-integration.html" /> 
+    <link rel="next" title="Drive-Time Matrix" href="drive-time.html" />
+    <link rel="prev" title="Initializing App" href="initializing-app.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -83,11 +84,14 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation/initiating-app.html">Initiating App</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="initializing-app.html">Initializing App</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Map Widget API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#show-drawing-widget">Show Drawing Widget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-geographies">Transfer Geographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#display-scenarios">Display Scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#address-lookup">Address Lookup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#show-geography">Show Geography</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#editable-geography">Editable Geography</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hierarchy-functionality">Hierarchy Functionality</a></li>
@@ -96,6 +100,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="drive-time.html">Drive-Time Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a></li>
 </ul>
 
             
@@ -173,6 +179,26 @@
 </div>
 <img alt="../_images/show-drawing-widget.png" src="../_images/show-drawing-widget.png" />
 </div>
+<div class="section" id="transfer-geographies">
+<h2>Transfer Geographies<a class="headerlink" href="#transfer-geographies" title="Permalink to this headline">¶</a></h2>
+<p>Our app allows you to transfer Geographies between Territories. To do so, you pass the new <code class="docutils literal notranslate"><span class="pre">territorySeq</span></code>, the <code class="docutils literal notranslate"><span class="pre">geographySeq</span></code>, and <code class="docutils literal notranslate"><span class="pre">tenantId</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">assignTerritoryGeography(territorySeq,</span> <span class="pre">geographySeq,</span> <span class="pre">tenantId);</span></code></p>
+<p>Example</p>
+<p><code class="docutils literal notranslate"><span class="pre">window.navagis.assignTerritoryGeography('12345',</span> <span class="pre">'514536257427079169',</span> <span class="pre">'333');</span></code></p>
+</div>
+<div class="section" id="display-scenarios">
+<h2>Display Scenarios<a class="headerlink" href="#display-scenarios" title="Permalink to this headline">¶</a></h2>
+<p>To display a “Scenario”, you can pass in two Geographies. Here’s an example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">window.navagis.showTerritoryScenario('333',</span> <span class="pre">'507499383009323574',</span> <span class="pre">'2018-01-01',</span> <span class="pre">'2018-12-31',</span> <span class="pre">'507499383009323769',</span> <span class="pre">'2018-01-01',</span> <span class="pre">'2018-12-31');</span></code></p>
+<img alt="../_images/scenarios.png" src="../_images/scenarios.png" />
+</div>
+<div class="section" id="address-lookup">
+<h2>Address Lookup<a class="headerlink" href="#address-lookup" title="Permalink to this headline">¶</a></h2>
+<p>When typing an address on the <code class="docutils literal notranslate"><span class="pre">showMapViewerWidget(</span></code>), the app returns a response object called <code class="docutils literal notranslate"><span class="pre">data</span></code>. In that response, we return the number of Geographies associated with that address.</p>
+<img alt="../_images/address-lookup.png" src="../_images/address-lookup.png" />
+<p>For a detailed response, see this screenshot:</p>
+<img alt="../_images/address-lookup-response.png" src="../_images/address-lookup-response.png" />
+</div>
 <div class="section" id="show-geography">
 <h2>Show Geography<a class="headerlink" href="#show-geography" title="Permalink to this headline">¶</a></h2>
 <p><em>Shows a geography on the map.</em></p>
@@ -240,8 +266,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="drive-time.html" class="btn btn-neutral float-right" title="Drive-Time Matrix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="../specs/api-integration.html" class="btn btn-neutral" title="API Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="initializing-app.html" class="btn btn-neutral" title="Initializing App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

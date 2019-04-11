@@ -3,9 +3,9 @@ Map Widget API
 
 The following sections show you how to include the mapping widget and its functionality.
 
-==============
+====================
 Show Drawing Widget
-==============
+====================
 
 *Shows the drawing tools and upload file tool on the map.*
 
@@ -16,6 +16,40 @@ Show Drawing Widget
     </script>
 
 .. image:: ../images/show-drawing-widget.png
+
+=====================
+Transfer Geographies
+=====================
+
+Our app allows you to transfer Geographies between Territories. To do so, you pass the new ``territorySeq``, the ``geographySeq``, and ``tenantId``.
+
+``assignTerritoryGeography(territorySeq, geographySeq, tenantId);``
+
+Example
+
+``window.navagis.assignTerritoryGeography('12345', '514536257427079169', '333');``
+
+==================
+Display Scenarios
+==================
+
+To display a “Scenario”, you can pass in two Geographies. Here’s an example:
+
+``window.navagis.showTerritoryScenario('333', '507499383009323574', '2018-01-01', '2018-12-31', '507499383009323769', '2018-01-01', '2018-12-31');``
+
+.. image:: ../images/scenarios.png
+
+===============
+Address Lookup
+===============
+
+When typing an address on the ``showMapViewerWidget(``), the app returns a response object called ``data``. In that response, we return the number of Geographies associated with that address.
+
+.. image:: ../images/address-lookup.png
+
+For a detailed response, see this screenshot:
+
+.. image:: ../images/address-lookup-response.png
 
 ==============
 Show Geography

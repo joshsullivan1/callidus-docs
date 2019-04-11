@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Features &mdash; Callidus Mapping  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Drive-Time Matrix" href="../usage/drive-time.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+          
+
+          
+            
+            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/initializing-app.html">Initializing App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/widget.html">Map Widget API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/drive-time.html">Drive-Time Matrix</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#geography-hierarchy">Geography Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#select-geographic-features">Select Geographic Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#heat-map-of-accounts">Heat Map of Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#draw-lasso-of-accounts">Draw Lasso of Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-on-hover">Data on Hover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-data-source-assignment">External Data Source Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-for-geolocation-information">API for Geolocation Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#refresh-geolocation-information">Refresh Geolocation Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-syncing-of-accounts">Manual Syncing of Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#show-parent-geographies">Show Parent Geographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#given-address-within-a-geography">Given Address within a Geography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-grid-controls">Data Grid Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#show-territory-map">Show Territory Map</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Callidus Mapping</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Features</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/features/features.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="features">
+<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="geography-hierarchy">
+<h2>Geography Hierarchy<a class="headerlink" href="#geography-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>To distinguish parent and child Geographies, we have included various colors down to 7 “levels”.</p>
+<img alt="../_images/geography-hierarchy.png" src="../_images/geography-hierarchy.png" />
+</div>
+<div class="section" id="select-geographic-features">
+<h2>Select Geographic Features<a class="headerlink" href="#select-geographic-features" title="Permalink to this headline">¶</a></h2>
+<p>You can select multiple geographic features, including:</p>
+<ul class="simple">
+<li>Road</li>
+<li>Transit</li>
+<li>Landscape</li>
+<li>Water</li>
+<li>Points of interest</li>
+</ul>
+<img alt="../_images/select-geo-features.png" src="../_images/select-geo-features.png" />
+</div>
+<div class="section" id="heat-map-of-accounts">
+<h2>Heat Map of Accounts<a class="headerlink" href="#heat-map-of-accounts" title="Permalink to this headline">¶</a></h2>
+<p>By toggling the button shown in the <code class="docutils literal notranslate"><span class="pre">showMapViewerWidget()</span></code>, you can view the Accounts assoicated with a Geography based on the longitude and latitude of the Account within the area of the Polygon.</p>
+<img alt="../_images/heatmap-accounts.png" src="../_images/heatmap-accounts.png" />
+</div>
+<div class="section" id="draw-lasso-of-accounts">
+<h2>Draw Lasso of Accounts<a class="headerlink" href="#draw-lasso-of-accounts" title="Permalink to this headline">¶</a></h2>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">showMapViewerWidget()</span></code>, you can use one of the drawing tools to draw a Polygon and return a list of Account shown on the heatmap.</p>
+<img alt="../_images/draw-lasso.png" src="../_images/draw-lasso.png" />
+</div>
+<div class="section" id="data-on-hover">
+<h2>Data on Hover<a class="headerlink" href="#data-on-hover" title="Permalink to this headline">¶</a></h2>
+<p>By hovering over a <strong>Geography</strong>, we currently show the number of <strong>Accounts</strong>.</p>
+<img alt="../_images/data-hover.png" src="../_images/data-hover.png" />
+</div>
+<div class="section" id="external-data-source-assignment">
+<h2>External Data Source Assignment<a class="headerlink" href="#external-data-source-assignment" title="Permalink to this headline">¶</a></h2>
+<p>By click on the “Upload KML/KMZ” button, you can upload a file to assign a Polygon to a Geography.</p>
+<img alt="../_images/upload-file.png" src="../_images/upload-file.png" />
+</div>
+<div class="section" id="api-for-geolocation-information">
+<h2>API for Geolocation Information<a class="headerlink" href="#api-for-geolocation-information" title="Permalink to this headline">¶</a></h2>
+<p>We have provided a simple Javascript call that return the geocoded data for a particular location.</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">geocodeAddress</span><span class="p">(</span><span class="s2">&quot;nevada&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do stuff</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Sample Result</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;results&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address_components&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;long_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Nevada&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;short_name&quot;</span><span class="o">:</span> <span class="s2">&quot;NV&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;types&quot;</span><span class="o">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;administrative_area_level_1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;political&quot;</span>
+                    <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;long_name&quot;</span><span class="o">:</span> <span class="s2">&quot;United States&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;short_name&quot;</span><span class="o">:</span> <span class="s2">&quot;US&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;types&quot;</span><span class="o">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;country&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;political&quot;</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;formatted_address&quot;</span><span class="o">:</span> <span class="s2">&quot;Nevada, USA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;bounds&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;northeast&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;lat&quot;</span><span class="o">:</span> <span class="mf">42.002207</span><span class="p">,</span>
+                        <span class="s2">&quot;lng&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">114.0396479</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;southwest&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;lat&quot;</span><span class="o">:</span> <span class="mf">35.001857</span><span class="p">,</span>
+                        <span class="s2">&quot;lng&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">120.0064729</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;location&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;lat&quot;</span><span class="o">:</span> <span class="mf">38.8026097</span><span class="p">,</span>
+                    <span class="s2">&quot;lng&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">116.419389</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;location_type&quot;</span><span class="o">:</span> <span class="s2">&quot;APPROXIMATE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;viewport&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;northeast&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;lat&quot;</span><span class="o">:</span> <span class="mf">42.002207</span><span class="p">,</span>
+                        <span class="s2">&quot;lng&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">114.0396479</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;southwest&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;lat&quot;</span><span class="o">:</span> <span class="mf">35.001857</span><span class="p">,</span>
+                        <span class="s2">&quot;lng&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">120.0064729</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;place_id&quot;</span><span class="o">:</span> <span class="s2">&quot;ChIJcbTe-KEKmYARs5X8qooDR88&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;types&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;administrative_area_level_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;political&quot;</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="refresh-geolocation-information">
+<h2>Refresh Geolocation Information<a class="headerlink" href="#refresh-geolocation-information" title="Permalink to this headline">¶</a></h2>
+<p>Endpoint: <code class="docutils literal notranslate"><span class="pre">http://ip_address/v1/accounts/address/geocode/refresh</span></code></p>
+<p>The required parameter is Acocunt ID. You can pass in a list of Account IDs.</p>
+<p>Example:</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">refreshGeolocation</span><span class="p">([</span><span class="s1">&#39;509751182822998017&#39;</span><span class="p">,</span> <span class="s1">&#39;509751182822998018&#39;</span><span class="p">,</span> <span class="s1">&#39;509751182822998019&#39;</span><span class="p">])</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do stuff</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Response:</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+<span class="s2">&quot;account_updated&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;509751182822998017&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;509751182822998018&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1">// note only two accounts were updated cause the third account haven&#39;t reached the 30-day limit yet</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="manual-syncing-of-accounts">
+<h2>Manual Syncing of Accounts<a class="headerlink" href="#manual-syncing-of-accounts" title="Permalink to this headline">¶</a></h2>
+<p>Endpoint: <code class="docutils literal notranslate"><span class="pre">http://ip_address/v1/accounts/address/sync</span></code></p>
+<p>Example:</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">syncAccounts</span><span class="p">([</span><span class="s1">&#39;509751182822998017&#39;</span><span class="p">,</span> <span class="s1">&#39;509751182822998018&#39;</span><span class="p">,</span> <span class="s1">&#39;509751182822998010&#39;</span><span class="p">])</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do stuff</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Response</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;syncedAccounts&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;509751182822998017&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;509751182822998018&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;notFoundAccounts&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="s2">&quot;509751182822998010&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-parent-geographies">
+<h2>Show Parent Geographies<a class="headerlink" href="#show-parent-geographies" title="Permalink to this headline">¶</a></h2>
+<p>To show multiple parent Geographies on the same map, you can use the following function and pass in the <code class="docutils literal notranslate"><span class="pre">geographySeq</span></code>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">window.navagis.showGeographiesMap(['514536257427079169',</span> <span class="pre">'514536257427123269',</span> <span class="pre">'514536257427123169']);</span></code></p>
+<img alt="../_images/show-parent-geos.png" src="../_images/show-parent-geos.png" />
+</div>
+<div class="section" id="given-address-within-a-geography">
+<h2>Given Address within a Geography<a class="headerlink" href="#given-address-within-a-geography" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">setAddressLookupCallback</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do stuff</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-grid-controls">
+<h2>Data Grid Controls<a class="headerlink" href="#data-grid-controls" title="Permalink to this headline">¶</a></h2>
+<p>This shows the datagrid control map. The parameters are filter and callback. Callback will be invoked everytime the filter or the map bounds is changed and data contains all the accounts and geographies inside the map bounds.</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">showDataGridControl</span><span class="p">({</span>
+    <span class="nx">showAssignedAccounts</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">showUnassignedAccounts</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">showAssignedGeographies</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">showUnAssignedGeographies</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do stuff</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">navagis</span><span class="p">.</span><span class="nx">setDataGridControlFilters</span><span class="p">({</span>
+    <span class="nx">showAssignedAccounts</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">showUnassignedAccounts</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">showAssignedGeographies</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">showUnAssignedGeographies</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Sample Result for Callback</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">geographies</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">account_seq</span><span class="o">:</span> <span class="s2">&quot;509751182822998017&quot;</span><span class="p">,</span>
+            <span class="nx">account_type</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nx">lat</span><span class="o">:</span> <span class="s2">&quot;38.4239752&quot;</span><span class="p">,</span>
+            <span class="nx">lng</span><span class="o">:</span> <span class="s2">&quot;-121.4146915&quot;</span><span class="p">,</span>
+            <span class="nx">status</span><span class="o">:</span> <span class="s2">&quot;ASSIGNED&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">accounts</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;514536257427079169&quot;</span><span class="p">,</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+            <span class="nx">org_id</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nx">parent_id</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nx">paths</span><span class="o">:</span> <span class="p">[...],</span>
+            <span class="nx">status</span><span class="o">:</span> <span class="s2">&quot;ASSIGNED&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-territory-map">
+<h2>Show Territory Map<a class="headerlink" href="#show-territory-map" title="Permalink to this headline">¶</a></h2>
+<p>To show a Territory map, use the following function:</p>
+<p><code class="docutils literal notranslate"><span class="pre">showTerritoryMap(tenantId,</span> <span class="pre">territorySeq,</span> <span class="pre">effStartDate,</span> <span class="pre">effEndDate)</span></code></p>
+<p>Example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">window.navagis.showTerritoryMap('333',</span> <span class="pre">'507499383009323574',</span> <span class="pre">'2018-01-01',</span> <span class="pre">'2018-12-31');</span></code></p>
+<img alt="../_images/show-territory.png" src="../_images/show-territory.png" />
+<img alt="../_images/show-territory-1.png" src="../_images/show-territory-1.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../usage/drive-time.html" class="btn btn-neutral" title="Drive-Time Matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Navagis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

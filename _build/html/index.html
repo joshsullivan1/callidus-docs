@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Docker Installation" href="installation/docker.html" /> 
+    <link rel="next" title="API Setup" href="installation/api.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -81,13 +81,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation/docker.html">Docker Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation/api.html">API Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation/widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/initializing-app.html">Initializing App</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specs/database-schema.html">Database Schema</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specs/api-integration.html">API Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/initializing-app.html">Initializing App</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage/widget.html">Map Widget API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/drive-time.html">Drive-Time Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/features.html">Features</a></li>
 </ul>
 
             
@@ -156,18 +157,40 @@
 <h1>Welcome to Callidus Mapping documentation!<a class="headerlink" href="#welcome-to-callidus-mapping-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation/docker.html">Docker Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation/api.html">API Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation/widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/initializing-app.html">Initializing App</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation/initializing-app.html#full-html-example">Full HTML Example</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="specs/database-schema.html">Database Schema</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specs/api-integration.html">API Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/initializing-app.html">Initializing App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage/initializing-app.html#full-html-example">Full HTML Example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="usage/widget.html">Map Widget API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="usage/widget.html#show-drawing-widget">Show Drawing Widget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage/widget.html#transfer-geographies">Transfer Geographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage/widget.html#display-scenarios">Display Scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage/widget.html#address-lookup">Address Lookup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage/widget.html#show-geography">Show Geography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage/drive-time.html">Drive-Time Matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage/drive-time.html#drive-time-calculation">Drive Time Calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features/features.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#geography-hierarchy">Geography Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#select-geographic-features">Select Geographic Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#heat-map-of-accounts">Heat Map of Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#draw-lasso-of-accounts">Draw Lasso of Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#data-on-hover">Data on Hover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#external-data-source-assignment">External Data Source Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#api-for-geolocation-information">API for Geolocation Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#refresh-geolocation-information">Refresh Geolocation Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#manual-syncing-of-accounts">Manual Syncing of Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#show-parent-geographies">Show Parent Geographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#given-address-within-a-geography">Given Address within a Geography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#data-grid-controls">Data Grid Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/features.html#show-territory-map">Show Territory Map</a></li>
 </ul>
 </li>
 </ul>
@@ -182,7 +205,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="installation/docker.html" class="btn btn-neutral float-right" title="Docker Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="installation/api.html" class="btn btn-neutral float-right" title="API Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
