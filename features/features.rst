@@ -1,13 +1,6 @@
 Features
 *********
 
-Geography Hierarchy
-====================
-
-To distinguish parent and child Geographies, we have included various colors down to 7 “levels”.
-
-.. image:: ../images/geography-hierarchy.png
-
 Select Geographic Features
 ==========================
 
@@ -19,35 +12,30 @@ You can select multiple geographic features, including:
 - Water
 - Points of interest
 
-.. image:: ../images/select-geo-features.png
+.. image:: ../images/geo-features.png
 
 Heat Map of Accounts
 ====================
 
-By toggling the button shown in the ``showMapViewerWidget()``, you can view the Accounts assoicated with a Geography based on the longitude and latitude of the Account within the area of the Polygon.
+By toggling the button shown in the ``showMapViewerWidget()``, you can view the Accounts associated with a Geography based on the longitude and latitude of the Account within the area of the Polygon.
 
-.. image:: ../images/heatmap-accounts.png
+.. image:: ../images/heatmap.png
 
-Draw Lasso of Accounts
-=======================
-
-Using the ``showMapViewerWidget()``, you can use one of the drawing tools to draw a Polygon and return a list of Account shown on the heatmap.
-
-.. image:: ../images/draw-lasso.png
+.. image:: ../images/heatmap-toggle.png
 
 Data on Hover
 =============
 
-By hovering over a **Geography**, we currently show the number of **Accounts**.
+By hovering over a **Geography**, user can view information about each account.
 
-.. image:: ../images/data-hover.png
+.. image:: ../images/hover.png
 
 External Data Source Assignment
 ================================
 
 By click on the “Upload KML/KMZ” button, you can upload a file to assign a Polygon to a Geography.
 
-.. image:: ../images/upload-file.png
+.. image:: ../images/upload.png
 
 API for Geolocation Information
 ===============================
@@ -196,7 +184,7 @@ Given Address within a Geography
 .. code-block:: Javascript
 
     window.navagis.setAddressLookupCallback(function (data) {
-        // do stuff 
+        // do stuff
     });
 
 Data Grid Controls
@@ -253,7 +241,7 @@ Show Territory Map
 
 To show a Territory map, use the following function:
 
-``showTerritoryMap(tenantId, territorySeq, effStartDate, effEndDate)`` 
+``showTerritoryMap(tenantId, territorySeq, effStartDate, effEndDate)``
 
 Example:
 
@@ -264,3 +252,11 @@ Example:
 .. image:: ../images/show-territory-1.png
 
 
+Show Peer Geographies
+======================
+
+To show neighboring Geographies, use this function and pass is a list of ``geographySeq``:
+
+``window.navagis.showGeographiesMap(['514536257427079169', '514536257427123269', '514536257427123169']);``
+
+.. image:: ../images/show-peer-geos.png

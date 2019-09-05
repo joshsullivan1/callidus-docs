@@ -10,10 +10,6 @@ Welcome to Callidus Mapping documentation!
    :maxdepth: 2
 
    installation/api
-   installation/widget
-   specs/database-schema
-   specs/api-integration
-   usage/initializing-app
-   usage/widget
+   usage/widget_v2
+   features/features_v2
    usage/drive-time
-   features/features

@@ -27,9 +27,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Database Schema" href="../specs/database-schema.html" />
-    <link rel="prev" title="API Setup" href="api.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -48,12 +46,12 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -81,15 +79,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Setup</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/initializing-app.html">Initializing App</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/widget.html">Map Widget API</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features_v2.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/drive-time.html">Drive-Time Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a></li>
 </ul>
 
             
@@ -111,7 +104,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -158,9 +151,10 @@
 <h1>Widget Setup<a class="headerlink" href="#widget-setup" title="Permalink to this headline">¶</a></h1>
 <p>To setup the widget, please follow these steps:</p>
 <ol class="arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/var/www/callidus/client</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">start</span></code></li>
+<li><p>Navigate to client –&gt; src –&gt; features –&gt; common –&gt; services –&gt; <code class="docutils literal notranslate"><span class="pre">api.service.js</span></code> file and change the IP address of the server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/var/www/callidus/client</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">start</span></code></p></li>
 </ol>
 </div>
 
@@ -169,15 +163,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../specs/database-schema.html" class="btn btn-neutral float-right" title="Database Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="api.html" class="btn btn-neutral" title="API Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

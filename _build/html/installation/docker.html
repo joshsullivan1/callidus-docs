@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Docker Installation &mdash; Callidus Mapping  documentation</title>
+  <title>Docker &mdash; Callidus Mapping  documentation</title>
   
 
   
@@ -27,9 +27,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Setup" href="api.html" />
-    <link rel="prev" title="Welcome to Callidus Mapping documentation!" href="../index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -48,12 +46,12 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -81,14 +79,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Docker Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="initializing-app.html">Initializing App</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/widget.html">Map Widget API</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features_v2.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/drive-time.html">Drive-Time Matrix</a></li>
 </ul>
 
             
@@ -110,7 +104,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -134,7 +128,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Docker Installation</li>
+      <li>Docker</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,15 +147,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="docker-installation">
-<h1>Docker Installation<a class="headerlink" href="#docker-installation" title="Permalink to this headline">¶</a></h1>
-<p>Our goal is to offer a powerful set of APIs that is easy to deploy and maintain. We use Docker to package our app. Follow these simple steps to be up and running in minutes:</p>
-<ol class="arabic simple">
-<li>Install <a href="#id1"><span class="problematic" id="id2">`Docker https://docs.docker.com/install/`_</span></a> and <a href="#id3"><span class="problematic" id="id4">`Docker Compose https://docs.docker.com/compose/install/`_</span></a> on the host environment.</li>
-<li>Clone the repository: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:Navagis-LLC/Callidus.git</span></code></li>
-<li>Run <cite>docker-compose up -d –build</cite></li>
-</ol>
-<p>Grab a cup of coffee! ;-)</p>
+  <div class="section" id="docker">
+<h1>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h1>
+<p>To setup the Callidus Mapping App using Docker, please follow these steps:</p>
+<ul class="simple">
+<li><p>Download and install <a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">Docker</a></p></li>
+<li><p>Unpack the app and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the root directory</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code></p></li>
+</ul>
+<div class="section" id="helpful-commands">
+<h2>Helpful Commands<a class="headerlink" href="#helpful-commands" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span> <span class="pre">-a</span></code> will list all of the Docker containers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">&lt;docker_container_name&gt;</span> <span class="pre">bash</span></code> will enter the container</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">callidus_db_1</span> <span class="pre">bash</span></code> will enter the Postgres database container. When inside the container, run <code class="docutils literal notranslate"><span class="pre">psql</span> <span class="pre">-U</span> <span class="pre">callidususer</span> <span class="pre">-W</span> <span class="pre">callidus</span></code> and enter “youcantguess” at the password prompt.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\l</span></code> will list all the tables</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\c</span> <span class="pre">callidus</span></code> will change to the Callidus database</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\dt</span></code> will list the tables</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
 </div>
 
 
@@ -169,15 +178,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="api.html" class="btn btn-neutral float-right" title="API Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../index.html" class="btn btn-neutral" title="Welcome to Callidus Mapping documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

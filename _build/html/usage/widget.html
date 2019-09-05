@@ -27,9 +27,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Drive-Time Matrix" href="drive-time.html" />
-    <link rel="prev" title="Initializing App" href="initializing-app.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -48,12 +46,12 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -81,27 +79,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="initializing-app.html">Initializing App</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Map Widget API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#show-drawing-widget">Show Drawing Widget</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#transfer-geographies">Transfer Geographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#display-scenarios">Display Scenarios</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#address-lookup">Address Lookup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#show-geography">Show Geography</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#editable-geography">Editable Geography</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hierarchy-functionality">Hierarchy Functionality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#full-example">Full Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features_v2.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="drive-time.html">Drive-Time Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a></li>
 </ul>
 
             
@@ -123,7 +104,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -209,9 +190,9 @@
 </div>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><strong>id</strong> (required): id of the geography to be shown</li>
-<li><strong>isEditable</strong> (default is false): boolean flag to determine whether the geography shown should be editable</li>
-<li><strong>showHierarchy</strong> (default is false): boolean flag to determine whether to include view hierarchy functionality</li>
+<li><p><strong>id</strong> (required): id of the geography to be shown</p></li>
+<li><p><strong>isEditable</strong> (default is false): boolean flag to determine whether the geography shown should be editable</p></li>
+<li><p><strong>showHierarchy</strong> (default is false): boolean flag to determine whether to include view hierarchy functionality</p></li>
 </ul>
 <img alt="../_images/show-geography.png" src="../_images/show-geography.png" />
 <div class="section" id="editable-geography">
@@ -247,11 +228,11 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li><code class="docutils literal notranslate"><span class="pre">onClickSave(data)</span></code> is invoked when the user clicks the “Save” button on the image above.</li>
-<li><code class="docutils literal notranslate"><span class="pre">window.navagis.saveGeography(id,</span> <span class="pre">name,</span> <span class="pre">parentId)</span></code> saves the new Geography. If no <code class="docutils literal notranslate"><span class="pre">parentId</span></code> is returned, the Geography will be saved as the parent. If <code class="docutils literal notranslate"><span class="pre">parentId</span></code> is returned, a <code class="docutils literal notranslate"><span class="pre">child</span></code> geography will be created.</li>
-<li><code class="docutils literal notranslate"><span class="pre">ApiService.createGeography(data,</span> <span class="pre">callbackFunction)</span></code> should be replaced with Callidus’s implementation on how to create geography, and that implementation should have a callback which returns the <code class="docutils literal notranslate"><span class="pre">geographySeq</span></code> of the newly created geography.</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">onClickSave(data)</span></code> is invoked when the user clicks the “Save” button on the image above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">window.navagis.saveGeography(id,</span> <span class="pre">name,</span> <span class="pre">parentId)</span></code> saves the new Geography. If no <code class="docutils literal notranslate"><span class="pre">parentId</span></code> is returned, the Geography will be saved as the parent. If <code class="docutils literal notranslate"><span class="pre">parentId</span></code> is returned, a <code class="docutils literal notranslate"><span class="pre">child</span></code> geography will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ApiService.createGeography(data,</span> <span class="pre">callbackFunction)</span></code> should be replaced with Callidus’s implementation on how to create geography, and that implementation should have a callback which returns the <code class="docutils literal notranslate"><span class="pre">geographySeq</span></code> of the newly created geography.</p></li>
 </ul>
 </div>
 </div>
@@ -263,15 +244,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="drive-time.html" class="btn btn-neutral float-right" title="Drive-Time Matrix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="initializing-app.html" class="btn btn-neutral" title="Initializing App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

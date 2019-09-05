@@ -27,8 +27,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Drive-Time Matrix" href="../usage/drive-time.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -47,12 +46,12 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -80,30 +79,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/initializing-app.html">Initializing App</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/widget.html">Map Widget API</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features_v2.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/drive-time.html">Drive-Time Matrix</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Features</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#geography-hierarchy">Geography Hierarchy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#select-geographic-features">Select Geographic Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#heat-map-of-accounts">Heat Map of Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#draw-lasso-of-accounts">Draw Lasso of Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#data-on-hover">Data on Hover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#external-data-source-assignment">External Data Source Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api-for-geolocation-information">API for Geolocation Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#refresh-geolocation-information">Refresh Geolocation Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manual-syncing-of-accounts">Manual Syncing of Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#show-parent-geographies">Show Parent Geographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#given-address-within-a-geography">Given Address within a Geography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#data-grid-controls">Data Grid Controls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#show-territory-map">Show Territory Map</a></li>
-</ul>
-</li>
 </ul>
 
             
@@ -125,7 +104,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -170,42 +149,33 @@
             
   <div class="section" id="features">
 <h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="geography-hierarchy">
-<h2>Geography Hierarchy<a class="headerlink" href="#geography-hierarchy" title="Permalink to this headline">¶</a></h2>
-<p>To distinguish parent and child Geographies, we have included various colors down to 7 “levels”.</p>
-<img alt="../_images/geography-hierarchy.png" src="../_images/geography-hierarchy.png" />
-</div>
 <div class="section" id="select-geographic-features">
 <h2>Select Geographic Features<a class="headerlink" href="#select-geographic-features" title="Permalink to this headline">¶</a></h2>
 <p>You can select multiple geographic features, including:</p>
 <ul class="simple">
-<li>Road</li>
-<li>Transit</li>
-<li>Landscape</li>
-<li>Water</li>
-<li>Points of interest</li>
+<li><p>Road</p></li>
+<li><p>Transit</p></li>
+<li><p>Landscape</p></li>
+<li><p>Water</p></li>
+<li><p>Points of interest</p></li>
 </ul>
-<img alt="../_images/select-geo-features.png" src="../_images/select-geo-features.png" />
+<img alt="../_images/geo-features.png" src="../_images/geo-features.png" />
 </div>
 <div class="section" id="heat-map-of-accounts">
 <h2>Heat Map of Accounts<a class="headerlink" href="#heat-map-of-accounts" title="Permalink to this headline">¶</a></h2>
-<p>By toggling the button shown in the <code class="docutils literal notranslate"><span class="pre">showMapViewerWidget()</span></code>, you can view the Accounts assoicated with a Geography based on the longitude and latitude of the Account within the area of the Polygon.</p>
-<img alt="../_images/heatmap-accounts.png" src="../_images/heatmap-accounts.png" />
-</div>
-<div class="section" id="draw-lasso-of-accounts">
-<h2>Draw Lasso of Accounts<a class="headerlink" href="#draw-lasso-of-accounts" title="Permalink to this headline">¶</a></h2>
-<p>Using the <code class="docutils literal notranslate"><span class="pre">showMapViewerWidget()</span></code>, you can use one of the drawing tools to draw a Polygon and return a list of Account shown on the heatmap.</p>
-<img alt="../_images/draw-lasso.png" src="../_images/draw-lasso.png" />
+<p>By toggling the button shown in the <code class="docutils literal notranslate"><span class="pre">showMapViewerWidget()</span></code>, you can view the Accounts associated with a Geography based on the longitude and latitude of the Account within the area of the Polygon.</p>
+<img alt="../_images/heatmap.png" src="../_images/heatmap.png" />
+<img alt="../_images/heatmap-toggle.png" src="../_images/heatmap-toggle.png" />
 </div>
 <div class="section" id="data-on-hover">
 <h2>Data on Hover<a class="headerlink" href="#data-on-hover" title="Permalink to this headline">¶</a></h2>
-<p>By hovering over a <strong>Geography</strong>, we currently show the number of <strong>Accounts</strong>.</p>
-<img alt="../_images/data-hover.png" src="../_images/data-hover.png" />
+<p>By hovering over a <strong>Geography</strong>, user can view information about each account.</p>
+<img alt="../_images/hover.png" src="../_images/hover.png" />
 </div>
 <div class="section" id="external-data-source-assignment">
 <h2>External Data Source Assignment<a class="headerlink" href="#external-data-source-assignment" title="Permalink to this headline">¶</a></h2>
 <p>By click on the “Upload KML/KMZ” button, you can upload a file to assign a Polygon to a Geography.</p>
-<img alt="../_images/upload-file.png" src="../_images/upload-file.png" />
+<img alt="../_images/upload.png" src="../_images/upload.png" />
 </div>
 <div class="section" id="api-for-geolocation-information">
 <h2>API for Geolocation Information<a class="headerlink" href="#api-for-geolocation-information" title="Permalink to this headline">¶</a></h2>
@@ -392,6 +362,12 @@
 <img alt="../_images/show-territory.png" src="../_images/show-territory.png" />
 <img alt="../_images/show-territory-1.png" src="../_images/show-territory-1.png" />
 </div>
+<div class="section" id="show-peer-geographies">
+<h2>Show Peer Geographies<a class="headerlink" href="#show-peer-geographies" title="Permalink to this headline">¶</a></h2>
+<p>To show neighboring Geographies, use this function and pass is a list of <code class="docutils literal notranslate"><span class="pre">geographySeq</span></code>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">window.navagis.showGeographiesMap(['514536257427079169',</span> <span class="pre">'514536257427123269',</span> <span class="pre">'514536257427123169']);</span></code></p>
+<img alt="../_images/show-peer-geos.png" src="../_images/show-peer-geos.png" />
+</div>
 </div>
 
 
@@ -399,13 +375,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../usage/drive-time.html" class="btn btn-neutral" title="Drive-Time Matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Versions &mdash; Callidus Mapping  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features_v2.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/drive-time.html">Drive-Time Matrix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Callidus Mapping</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Versions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/versions/versions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="versions">
+<h1>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1.0 - 1908<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="t-q-code-edits">
+<h3>T&amp;Q Code Edits<a class="headerlink" href="#t-q-code-edits" title="Permalink to this headline">¶</a></h3>
+<p>../TerritoryQuotaMgr/index.jsp</p>
+<p>Commented out lines 312 and 374</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mi">312</span> <span class="o">&lt;%--</span> <span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="s2">&quot;1&quot;</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">getParameter</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">)))</span> <span class="p">{</span><span class="o">%&gt;</span> <span class="o">--%&gt;</span>
+<span class="mi">374</span> <span class="o">&lt;%--</span> <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span> <span class="o">--%&gt;</span>
+</pre></div>
+</div>
+<p>Created script to append main.js and Google Maps API to closing body tag (lines 312-326)</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>316 &lt;script type=&quot;text/javascript&quot;&gt;
+317 function appendBody(){
+318         var mapWidget = document.createElement(&quot;script&quot;);
+319         mapWidget.src = &quot;//35.247.169.251/js/main.js&quot;;
+320         var googleApi = document.createElement(&quot;script&quot;);
+321         googleApi.src = &quot;https://maps.googleapis.com/maps/api/js?v=3&amp;key=API_KEY&amp;libraries=places,drawing,geometry,visualization&amp;region=US&quot;
+322         document.body.appendChild(googleApi);
+323         document.body.appendChild(mapWidget);
+324         console.log(mapWidget);
+325 };
+326 &lt;/script&gt;
+</pre></div>
+</div>
+<p>Called above function (line 330)</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">appendBody</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Navagis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

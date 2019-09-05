@@ -27,9 +27,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Map Widget API" href="widget.html" />
-    <link rel="prev" title="API Integration" href="../specs/api-integration.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -48,12 +46,12 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Callidus Mapping
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/navagis-logo-tagline.png" class="logo" alt="Logo"/>
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -81,23 +79,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">API Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation/widget.html">Widget Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/database-schema.html">Database Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../specs/api-integration.html">API Integration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Initializing App</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#full-html-example">Full HTML Example</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#base-html">base.html</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#show-map-html">show_map.html</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#show-geography-html">show_geography.html</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="widget.html">Map Widget API</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features_v2.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="drive-time.html">Drive-Time Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a></li>
 </ul>
 
             
@@ -119,7 +104,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -166,10 +151,12 @@
 <h1>Initializing App<a class="headerlink" href="#initializing-app" title="Permalink to this headline">¶</a></h1>
 <p>To load the Mapping Widget in the Callidus app, you have to include the following code snippet <em>before</em> the closing <code class="docutils literal notranslate"><span class="pre">&lt;/body&gt;</span></code> tag:</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">type=&quot;text/javascript&quot;</span> <span class="pre">src=&quot;http://35.247.169.251/js/main.js&quot;&gt;&lt;/script&gt;</span></code></div></blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">type=&quot;text/javascript&quot;</span> <span class="pre">src=&quot;http://35.247.169.251/js/main.js&quot;&gt;&lt;/script&gt;</span></code></p>
+</div></blockquote>
 <p>To load the Mapping Widget on individual pages, include the following code:</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">id=&quot;navagis-widget&quot;&gt;&lt;/div&gt;</span></code></div></blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">id=&quot;navagis-widget&quot;&gt;&lt;/div&gt;</span></code></p>
+</div></blockquote>
 <div class="section" id="full-html-example">
 <h2>Full HTML Example<a class="headerlink" href="#full-html-example" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="base-html">
@@ -237,11 +224,11 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>The IP address will change in the production environment. The current IP address, <code class="docutils literal notranslate"><span class="pre">35.247.169.251</span></code>, points to our development server.</li>
-<li>In addition to the <code class="docutils literal notranslate"><span class="pre">div</span></code> snippet, you must also include javascript on each page for different functionality. See Map Widget API section.</li>
-<li>The examples above are based on <a class="reference external" href="http://jinja.pocoo.org/">Jinja</a></li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The IP address will change in the production environment. The current IP address, <code class="docutils literal notranslate"><span class="pre">35.247.169.251</span></code>, points to our development server.</p></li>
+<li><p>In addition to the <code class="docutils literal notranslate"><span class="pre">div</span></code> snippet, you must also include javascript on each page for different functionality. See Map Widget API section.</p></li>
+<li><p>The examples above are based on <a class="reference external" href="http://jinja.pocoo.org/">Jinja</a></p></li>
 </ul>
 </div>
 </div>
@@ -253,15 +240,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="widget.html" class="btn btn-neutral float-right" title="Map Widget API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../specs/api-integration.html" class="btn btn-neutral" title="API Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

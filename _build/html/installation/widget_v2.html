@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Navagis Functions &mdash; Callidus Mapping  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/navagis-logo-tagline-edited.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Mapping App Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/features_v2.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/drive-time.html">Drive-Time Matrix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Callidus Mapping</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Navagis Functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation/widget_v2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="navagis-functions">
+<h1>Navagis Functions<a class="headerlink" href="#navagis-functions" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">Navagis</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">store</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="nx">store</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">unmount</span><span class="p">(</span><span class="nx">id</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">id</span>
+                      <span class="o">?</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span>
+                      <span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;navagis-widget&#39;</span><span class="p">);</span>
+
+        <span class="nx">unmountComponentAtNode</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">redirect</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">renderMyApp</span><span class="p">();</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">getMapOverlays</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">state</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s1">&#39;mapWidget&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">mapWidget</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s1">&#39;overlays&#39;</span><span class="p">))</span> <span class="p">{</span>
+            <span class="c1">// todo transform data here to json</span>
+            <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">mapWidget</span><span class="p">.</span><span class="nx">overlays</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">showChildMapDrawingWidget</span><span class="p">(</span><span class="nx">parentId</span><span class="p">,</span> <span class="nx">tenantId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/map-widget/draw/</span><span class="si">${</span><span class="nx">parentId</span><span class="si">}</span><span class="sb">/child?tenantId=</span><span class="si">${</span><span class="nx">tenantId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">showMapDrawingWidget</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">geographySeq</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">parentGeographySeq</span><span class="o">=</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">renderMyApp</span><span class="p">();</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">showMapDrawingWidget</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">geographySeq</span><span class="p">,</span> <span class="nx">parentGeographySeq</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">showMapViewerWidget</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/map-widget/view?tenantId=${tenantId}&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">getGeographyParents</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">getGeographyParents</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">getGeographyChildren</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">getGeographyChildren</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">saveGeography</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">geographySeq</span><span class="p">,</span> <span class="nx">parentGeographySeq</span><span class="o">=</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">saveGeography</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">geographySeq</span><span class="p">,</span> <span class="nx">parentGeographySeq</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">showGeographyMap</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">tenantId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="sb">`/map-widget/geography/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">?tenantId=</span><span class="si">${</span><span class="nx">tenantId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">showGeographiesMap</span><span class="p">(</span><span class="nx">geographies</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">GeographyService</span><span class="p">.</span><span class="nx">setMultiDisplayGeographies</span><span class="p">(</span><span class="nx">geographies</span><span class="p">);</span>
+
+        <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/map-widget/geographies&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">showcreateChildGeography</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">parentId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/map-widget/geography/</span><span class="si">${</span><span class="nx">parentId</span><span class="si">}</span><span class="sb">/child/new?id=</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">&amp;name=</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">saveChildGeography</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">parentId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">saveGeography</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">parentId</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">assignTerritoryGeography</span><span class="p">(</span><span class="nx">territorySeq</span><span class="p">,</span> <span class="nx">geographySeq</span><span class="p">,</span> <span class="nx">tenantId</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">assignTerritoryGeography</span><span class="p">(</span><span class="nx">territorySeq</span><span class="p">,</span> <span class="nx">geographySeq</span><span class="p">,</span> <span class="nx">tenantId</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">showTerritoryMap</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">territoryProgramSeq</span><span class="p">,</span> <span class="nx">territorySeq</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">startDate</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">endDate</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">filters</span><span class="o">=</span><span class="p">{</span><span class="nx">accounts</span><span class="o">:</span> <span class="p">{</span><span class="nx">customer</span><span class="o">:</span> <span class="p">{</span><span class="nx">assigned</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unassigned</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span> <span class="nx">prospect</span><span class="o">:</span> <span class="p">{</span><span class="nx">assigned</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unassigned</span><span class="o">:</span> <span class="kc">false</span><span class="p">}</span> <span class="p">},</span> <span class="nx">geographies</span><span class="o">:</span> <span class="p">{</span><span class="nx">assigned</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unassigned</span><span class="o">:</span> <span class="kc">false</span><span class="p">}},</span> <span class="nx">accountsUpdatedCallback</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">onMarkerClickedCallback</span><span class="o">=</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">renderMyApp</span><span class="p">();</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">endDate</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">dateStr</span> <span class="o">=</span> <span class="s1">&#39;{m}/{d}/{y}&#39;</span><span class="p">,</span>
+                <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+            <span class="nx">endDate</span> <span class="o">=</span> <span class="nx">dateStr</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;{d}&#39;</span><span class="p">,</span> <span class="nb">String</span><span class="p">(</span><span class="nx">today</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()).</span><span class="nx">padStart</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">))</span>
+                    <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;{m}&#39;</span><span class="p">,</span> <span class="nb">String</span><span class="p">(</span><span class="nx">today</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">padStart</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">))</span>
+                    <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;{y}&#39;</span><span class="p">,</span> <span class="nx">today</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">showTerritory</span><span class="p">(</span><span class="nx">territoryProgramSeq</span><span class="p">,</span> <span class="nx">tenantId</span><span class="p">,</span> <span class="nx">territorySeq</span><span class="p">,</span> <span class="nx">startDate</span><span class="p">,</span> <span class="nx">endDate</span><span class="p">,</span> <span class="nx">filters</span><span class="p">,</span> <span class="nx">accountsUpdatedCallback</span><span class="p">,</span> <span class="nx">onMarkerClickedCallback</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="c1">// territoryData = {territorySeq: &#39;&#39;, name: &#39;&#39;, effectiveStartDate: &#39;&#39;}</span>
+    <span class="nx">onTerritoryClick</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">territoryData</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">onTerritoryClick</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">territoryData</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * id   = accountSeq or geographySeq</span>
+<span class="cm">     * type = account or geography</span>
+<span class="cm">     */</span>
+    <span class="nx">onTerritoryMapItemClick</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">isSelect</span><span class="o">=</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">onTerritoryMapItemClick</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">isSelect</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">deselectTerritory</span><span class="p">(</span><span class="nx">territorySeq</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">deselectTerritory</span><span class="p">(</span><span class="nx">territorySeq</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">updateTerritoryMapFilters</span><span class="p">(</span><span class="nx">filters</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">updateTerritoryMapFilters</span><span class="p">(</span><span class="nx">filters</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">updateTerritoryMapData</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">filters</span><span class="o">=</span><span class="p">{</span><span class="nx">accounts</span><span class="o">:</span> <span class="p">{</span><span class="nx">customer</span><span class="o">:</span> <span class="p">{</span><span class="nx">assigned</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unassigned</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span> <span class="nx">prospect</span><span class="o">:</span> <span class="p">{</span><span class="nx">assigned</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unassigned</span><span class="o">:</span> <span class="kc">false</span><span class="p">}</span> <span class="p">},</span> <span class="nx">geographies</span><span class="o">:</span> <span class="p">{</span><span class="nx">assigned</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unassigned</span><span class="o">:</span> <span class="kc">false</span><span class="p">}})</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">updateTerritoryMapData</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">filters</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">showTerritoryScenario</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">srcTerritorySeq</span><span class="p">,</span> <span class="nx">srcStartDate</span><span class="p">,</span> <span class="nx">destTerritorySeq</span><span class="p">,</span> <span class="nx">destStartDate</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">renderMyApp</span><span class="p">();</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">showTerritoryScenario</span><span class="p">(</span><span class="nx">tenantId</span><span class="p">,</span> <span class="nx">srcTerritorySeq</span><span class="p">,</span> <span class="nx">srcStartDate</span><span class="p">,</span> <span class="nx">destTerritorySeq</span><span class="p">,</span> <span class="nx">destStartDate</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">));</span>
+        <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">geocodeAddress</span><span class="p">(</span><span class="nx">address</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">ApiService</span><span class="p">.</span><span class="nx">geocodeAddress</span><span class="p">(</span><span class="nx">address</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">refreshGeolocation</span><span class="p">(</span><span class="nx">accountIds</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">ApiService</span><span class="p">.</span><span class="nx">refreshGeolocation</span><span class="p">(</span><span class="nx">accountIds</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">syncAccounts</span><span class="p">(</span><span class="nx">accountIds</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">ApiService</span><span class="p">.</span><span class="nx">syncAccounts</span><span class="p">(</span><span class="nx">accountIds</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">showDataGridControl</span><span class="p">(</span><span class="nx">filters</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">onDataChangedCallback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/data-grid-control&#39;</span><span class="p">);</span>
+        <span class="nx">DataGridControlService</span><span class="p">.</span><span class="nx">setOnDataChangedCallback</span><span class="p">(</span><span class="nx">onDataChangedCallback</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">filters</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">setDataGridControlFilters</span><span class="p">(</span><span class="nx">filters</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">setDataGridControlFilters</span><span class="p">(</span><span class="nx">filters</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">DataGridControlService</span><span class="p">.</span><span class="nx">setFilters</span><span class="p">(</span><span class="nx">filters</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">setAddressLookupCallback</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">GeographyService</span><span class="p">.</span><span class="nx">setAddressLookupCallback</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Navagis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
